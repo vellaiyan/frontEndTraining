@@ -1,9 +1,10 @@
-{
-"items": [ {
-"id": "1",
-"itemName": "samosa1"
-}, {
-"id": "2",
-"itemName": "samosa2"
-}]
-}
+[
+  {
+    "id": "1",
+    "name": "vellaiyan"
+  },
+  {
+    "id": "2",
+    "name": "saravanad"
+  }
+  ]
