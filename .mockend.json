@@ -1,13 +1,6 @@
 {
-    "cars": {
-        "Nissan": [
-            {"model":"Sentra", "doors":4},
-            {"model":"Maxima", "doors":4},
-            {"model":"Skyline", "doors":2}
-        ],
-        "Ford": [
-            {"model":"Taurus", "doors":4},
-            {"model":"Escort", "doors":4}
-        ]
+    "items": {
+        "id":1,
+        "itemName": "samosa"
     }
 }
