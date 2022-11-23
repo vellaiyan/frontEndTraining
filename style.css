@@ -1,0 +1,741 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --item-title-background: rgb(233, 237, 235);
+    --selected-items: #f7778e;
+    --primary-button: #f7778e;
+    --brands-background: #f7778e;
+    --information-background: #27272f;
+    --information-content: #8b8b99;
+    --information-title: #8b8b99;
+    --information-icon-color: #b95556;
+    --brand-name: #b95556;
+    --theme-name: #b95556;
+    --footer-links: #8b8b99;
+    --information-border-color: grey;
+    --footer-bar: #f7778e;
+    --primary-button-small: #f7778e;
+    --white: #fff;
+    --light-brown: rgb(110, 110, 110);
+    --black: rgb(0, 0, 0);
+    --border: rgb(207, 207, 216);
+    --red: red;
+    --secondary-button: #e2b375;
+
+
+
+}
+
+.container {
+    width: 100%;
+    padding-bottom: 2rem;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 3rem;
+    bottom: 0;
+    background-color:var(--white) ;
+    margin: auto;
+}
+
+header {
+    width: 97%;
+    position: absolute;
+    background-color: var(--white);
+    z-index: 1;
+    overflow: hidden;
+    position: fixed;
+    width: 100%;  
+}
+
+nav {
+    padding-top: 1rem;
+    margin: 0rem 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+ul li a {
+    font-weight: 900;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+ul li{
+    list-style: none;
+    font-weight: 550;
+    padding: 10px 10px;
+    font-size: 1rem;
+    display: inline-block;
+}
+
+.icons  {
+    padding: 10px;
+}
+
+.icons a{
+    padding: 0px 10px;
+}
+
+.fa-shopping-bag {
+    color: var(--light-brown);
+    font-size: 20px;
+
+}
+
+.fa-search {
+    color: var(--light-brown);
+    font-size: 20px;
+}
+
+.fa-bars {
+    color: var(--black);
+    font-size: 20px;
+}
+
+.home {
+    display: flex;
+    width: 10px;
+    height: 10px;
+    background-color: aqua;
+    color: aquamarine;
+}
+
+
+.home-section {
+    display: flex;
+    flex-direction: row;
+    padding-top: 0.9rem;
+    width: 100%;
+
+    margin-top: 1rem;
+
+}
+
+.left-side {
+    width: 50%;
+
+    object-fit: contain;
+    background: url("images/home-image1.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.right-side {
+    width: 60%;
+    height: 100vh;
+    object-fit: contain;
+    background: url("images/home-image2.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+
+.first-row {
+    display: flex;
+    height: 21rem;
+
+    background: var(--white);
+}
+
+.first-row img {
+width: auto;
+height: 15rem;
+
+}
+
+.second {
+    padding: 0rem 1.2rem;
+}
+
+.second-row img {
+    width: auto;
+    height: 15rem;
+}
+
+.item {
+    display: flex;
+
+    padding: 10px;
+    flex-direction: column;
+}
+
+.second-row {
+    padding-top: 0.6rem;
+    display: flex;
+    height: 21rem;
+    background:var(--white);
+}
+
+.items img {
+    border-right: 1px solid var(--border);
+    border-left: 1px solid var(--border);
+    border-top: 1px solid var(--border);
+}
+
+h2 {
+    text-align: center;
+    padding-top: 0.5rem;
+    font-size: 0.9rem;
+
+
+}
+
+p {
+    text-align: center;
+    padding-top: 0.1rem;
+    color: var(--red);
+}
+
+.item-title {
+    margin: -0.5rem 0rem;
+    border : 1px solid var(--border);
+    padding-bottom: 0.9rem;
+    background-color: var(--item-title-background);
+}
+
+select {
+    font-size: 1rem;
+    font-weight: 900;
+    border: none;
+}
+
+.selected {
+    color: var(--selected-items);
+}
+
+.about {
+    padding-top: 5rem;
+    height: 35rem;
+
+    overflow: hidden;
+    background-color:var(--white);
+}
+
+.contact-us p {
+    text-align: left;
+}
+
+.about img {
+    width: 100%;
+    position: absolute;
+}
+
+.about-content {
+    width: 65%;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,  -50%);
+
+}
+
+.about-content h3 {
+    text-align: center;
+    font-size: 2rem;
+}
+
+.about-content p {
+    padding-top: 1.2rem;
+    color: #8e8e9c;
+    text-align: center;
+}
+
+.content {
+
+    width: 100%;
+}
+
+.about-btn {
+    padding-top: 1rem;
+
+    text-align: center;
+    width: 100%;
+
+}
+
+.about-btn button {
+    padding: 0.6rem;
+    border: none;
+    border-radius: 0.3rem;
+    color: var(--white);
+    background-color: var(--primary-button);
+}
+
+.brands {
+    width: 100%;
+    padding: 0rem;
+    background: var(--brands-background);
+    margin-top: 14rem;
+}
+
+.brands div {
+    text-align: center;
+}
+
+.information {
+    width: 100%;
+    background: var(--information-background) ;
+    height: 41rem;
+}
+
+.footer-items {
+    display: flex;
+    justify-content: space-between;
+    padding: 9rem 4rem;
+}
+
+.footer-items h2 {
+    font-size: 1.1rem;
+    color: var(--white);    
+}
+
+span {
+    width: 10rem;
+    color: var(--white);
+}
+
+.information p {
+    padding-top: 2rem;
+    font-size: 0.7rem;
+    color: var(--information-content);
+
+}
+
+.information h3 {
+    padding-top: 0.6rem;
+    color: var(--information-title);
+    font-size: 0.8rem;
+}
+
+.footer-links {
+    padding-top: 0.5rem;
+}
+
+.fa-map-marker {
+    width: 13px;
+    font-size: 15px;
+    text-align: center;
+    margin: 0.3rem;
+    color: var(--information-icon-color);
+    background-color: var(--white);
+    border-radius: 100%;
+    border: 1px solid var(--information-border-color);
+    padding: 10px;
+
+}
+
+.fa-phone {
+    width: 13px;
+    font-size: 15px;
+    text-align: center;
+    margin: 0.3rem;
+    color: var(--information-icon-color);
+    background-color: var(--white);
+    border-radius: 100%;
+    border: 1px var(--information-border-color);
+    padding: 10px;
+
+}
+
+select:hover {
+    cursor: pointer;
+}
+
+.fa-telegram {
+    font-size: 15px;
+    margin: 0.3rem;
+    color: var(--information-icon-color);
+    background-color: var(--white);
+    border-radius: 100%;
+    border: 1px solid var(--information-border-color);
+    padding: 10px;
+
+}
+
+.opening-hours h3{
+    color: var(--white);
+    padding-top: 2rem;
+}
+
+.opening-hours p {
+    padding-top: 0.8rem;
+}
+
+.useful {
+    display: flex;
+    padding-top: 2rem;
+    flex-direction: column;
+}
+
+.useful-links a {
+    color: var(--information-content);
+    font-size: 1rem;
+    padding: 0.3rem 0rem;
+    text-decoration: none;
+    
+    
+}
+
+.map {
+    display: flex;
+}
+
+.map img {
+    padding-top: 2rem;
+    width: 17rem;
+    height: 17rem;
+
+}
+
+.copy-right {
+    width: 100%;
+    display: flex;
+
+    justify-content: space-evenly;
+     background: var(--black);
+
+}
+
+.brand-name {
+    color: var(--brand-name);
+}
+
+.theme-name {
+   color: var(--theme-name);
+}
+
+.copy-right ul a{
+    color: var(--footer-links);
+}
+
+.copy-right h3 {
+    padding-top: 1rem;
+    color:  #8b8b99;
+}
+
+.percen {
+	position: relative;
+	width: 44px;
+	height: 3px;
+	background: var(--footer-bar);
+	display: block;
+	margin-top: 5px;
+}
+
+footer h2 {
+    text-align: left;
+}
+
+.offer {
+    color: #8b8b99;  
+    text-decoration: line-through; 
+}
+
+.hot {
+    background: var(--primary-button-small);
+    background-image: -webkit-linear-gradient(top, var(--primary-button-small), var(--primary-button-small));
+    background-image: -moz-linear-gradient(top, var(--primary-button-small), var(--primary-button-small));
+    background-image: -ms-linear-gradient(top, var(--primary-button-small), var(--primary-button-small));
+    background-image: -o-linear-gradient(top, var(--primary-button-small), var(--primary-button-small));
+    background-image: linear-gradient(to bottom, var(--primary-button-small), var(--primary-button-small));
+    -webkit-border-radius: 28;
+    -moz-border-radius: 28;
+    border-radius: 28px;
+    font-family: Arial;
+    color: var(--white);
+    font-size: 14px;
+    padding: 3px 12px 3px 12px;
+    text-decoration: none;
+    border: none;
+    top: 8px;
+    right: 16px;
+    position: absolute;
+}
+
+.sale {
+    background: var(--secondary-button);
+    background-image: -webkit-linear-gradient(top, var(--secondary-button), var(--secondary-button));
+    background-image: -moz-linear-gradient(top, var(--secondary-button), var(--secondary-button));
+    background-image: -ms-linear-gradient(top, var(--secondary-button), var(--secondary-button));
+    background-image: -o-linear-gradient(top, var(--secondary-button), var(--secondary-button));
+    background-image: linear-gradient(to bottom, var(--secondary-button), var(--secondary-button));
+    -webkit-border-radius: 28;
+    -moz-border-radius: 28;
+    border-radius: 28px;
+    font-family: Arial;
+    color: var(--white);
+    font-size: 14px;
+    padding: 3px 7px 3px 7px;
+    text-decoration: none;
+    top: 39px;
+    right: 17px;
+    border: none;
+    position: absolute;
+
+}
+
+.sale-only {
+    background: var(--secondary-button);
+    background-image: -webkit-linear-gradient(top, var(--secondary-button), var(--secondary-button));
+    background-image: -moz-linear-gradient(top, var(--secondary-button), var(--secondary-button));
+    background-image: -ms-linear-gradient(top, var(--secondary-button), var(--secondary-button));
+    background-image: -o-linear-gradient(top, var(--secondary-button), var(--secondary-button));
+    background-image: linear-gradient(to bottom, var(--secondary-button), var(--secondary-button));
+    -webkit-border-radius: 28;
+    -moz-border-radius: 28;
+    border-radius: 28px;
+    font-family: Arial;
+    color: var(--white);
+    font-size: 14px;
+    padding: 3px 7px 3px 7px;
+    text-decoration: none;
+    border: none;
+    top: 8px;
+    right: 16px;
+    position: absolute;
+
+}
+
+.item-container {
+    position: relative;
+    text-align: center;  
+}
+
+.fa-arrow-circle-o-up {
+    bottom: 19px;
+
+    position: relative;
+    margin: 0.3rem;
+    color: #3e3636;
+    background-color: #1d1b1b;
+    border-radius: 100%;
+    border: 1px solid #3e3636;
+    padding: 10px;
+}
+
+.up-arrow-container {
+    margin-top: 1rem;
+}
+
+
+@media (max-width: 1440px) and (min-width: 1025px) {
+    .top-section .left-side{
+        width: 84%;
+        height: 45rem;
+    }
+
+    .about {
+        padding-top: 0rem;
+    }
+
+    .bottom-section {
+        margin: 3rem 0rem;
+        margin-bottom: -12rem;
+
+    }
+
+    .bottom-section .items {
+        padding: 2rem;
+        margin: 0rem 1rem;
+    }
+
+    .footer-items {
+        padding: 9rem 9rem;
+    }
+
+    .brands img {
+        width: 10rem;
+        height: auto;
+    }
+
+
+
+  } 
+
+
+   @media (max-width: 1024px) and (min-width:769px) {
+
+    .top-section .left-side {
+        width: 62%;
+    }
+    .second-row img  {
+        width: 14rem ;
+        height: auto;
+    
+    }
+
+    h2 {
+        font-size: 0.8rem;
+    }
+    
+    .first-row img {
+        width: 14rem;
+        height: auto;
+    }
+
+    .top-section .second-row{
+        margin: -3rem 0rem;
+    }
+    .about {
+        padding-top: 2rem;
+    }
+
+    .about .about-content {
+        top: 38%;
+    }
+
+    .bottom-section {
+        margin: -7rem 0rem -12rem;
+    }
+
+    .bottom-section .second-row {
+        margin: -3rem 0rem;
+    }
+
+    .bottom-section .items {
+        width: 47%;
+        margin: 0rem 1rem;
+    }
+
+    .footer-items {
+        padding: 9rem 4rem;
+    }
+
+    .brands img {
+        width: 8.3rem;
+        height: auto;
+    }
+
+  }
+
+  @media (max-width: 768px) and (min-width: 425px) {
+    ul li {
+        padding: 10px 3px;
+        font-size: 0.8rem;
+    }
+
+    .top-section .left-side {
+        width: 52%;
+    }
+
+    select {
+        font-size: 0.8rem;
+    }
+
+    .second-row img  {
+        width: 11rem ;
+        height: auto;
+    
+    }
+    
+    .first-row img {
+        width: 11rem;
+        height: auto;
+    }
+
+    h2 {
+        font-size: 0.6rem;   
+    }
+
+    .second-row {
+        margin: -7.6rem 0rem;
+    }
+
+    .hot {
+        font-size: 7px;
+
+    }
+
+    .sale {
+        font-size: 7px;
+        padding: 3px 10px 3px 10px;
+        right: 16px;
+        top: 26px;
+    }
+
+    .sale-only {
+        font-size: 7px;
+    }
+
+    .about {
+        padding-top: 2rem;
+        height: 22rem;
+
+    }
+
+    p {
+        font-size: 0.7rem;
+    }
+
+    .about-content {
+        top: 42%;
+    }
+
+    .about-content h3 {
+        font-size: 1.5rem;
+    }
+
+    .home-section .bottom-section {
+        padding-top: 34rem;
+    }
+
+    .brands {
+        margin-top: 7rem;
+    }
+
+    .brands img {
+        width: 6rem;
+    }
+
+    .footer-items {
+        padding: 9rem 1.1rem;
+    }
+
+    .footer-items h2 {
+        font-size: 0.9rem;
+    }
+
+    .useful-links a {
+        font-size: 0.8rem;
+    }
+
+    .map img {
+        height: 15rem;
+        width: 11rem;
+    }
+
+    .information {
+        height: 35rem;
+    }
+
+    .bottom-section .items {
+        margin: 0rem 1rem;
+    }
+
+    .copy-right h3 {
+        font-size: 1rem;
+    }
+
+
+
+  }
+
+  @media (max-width: 425px) and (min-width: 375px) {
+    .hot {
+        right: 52px;
+    }
+    
+  }
+
+
+ 
+
+
+
+
+

@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Ice Cream Seller</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+      integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="Style.css" />
+    <link
+      rel="stylesheet"
+      href="mobileView.css"
+      media="screen and (max-width: 424px)"
+    />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+  </head>
+
+  <body>
+    <div class="header-division">
+      <header>
+        <nav>
+          <a href="index.html"><img src="images/logo.png" alt="" /></a>
+          <ul>
+            <li class="selected-item">
+              <select name="home" class="selected">
+                <option value="">HOME</option>
+              </select>
+            </li>
+            <li>
+              <select name="feature">
+                <option value="">FEATURES</option>
+              </select>
+            </li>
+            <li>
+              <select name="shop">
+                <option value="">SHOP</option>
+              </select>
+            </li>
+            <li><a href="">BLOG</a></li>
+            <li><a href="">ABOUT US</a></li>
+            <li><a href="">CONTACT</a></li>
+          </ul>
+          <div class="icons">
+            <a href=""><i class="fa fa-search" aria-hidden="true"></i></a>
+            <a href=""><i class="fa fa-shopping-bag" aria-hidden="true"></i></a>
+            <a href=""><i class="fa fa-bars" aria-hidden="true"></i></a>
+          </div>
+        </nav>
+      </header>
+    </div>
+
+    <div class="container">
+      <div class="home-section top-section">
+        <div class="left-side"></div>
+
+        <div class="right-side items">
+          <div>
+            <div class="first-row">
+              <div>
+                <div class="item-container">
+                  <img src="images/Tiramisu-Flavor.jpg" alt="" />
+                  <div>
+                    <button class="hot">HOT</button>
+                  </div>
+                </div>
+
+                <div class="item-title">
+                  <h2>Ice Cream with Tiramisu Flavor</h2>
+                  <p>$12.00</p>
+                </div>
+              </div>
+
+              <div class="second">
+                <div class="item-container">
+                  <img src="images/Scrachatella.jpg" alt="" />
+                  <div>
+                    <button class="hot" id="hide">HOT</button>
+                  </div>
+                  <div>
+                    <button class="sale" id="hide">SAVE</button>
+                  </div>
+                </div>
+                <div class="item-title">
+                  <h2>Scrachatella Ice Cream</h2>
+                  <p>$36.90 <span class="offer">$41.00</span></p>
+                </div>
+              </div>
+            </div>
+
+            <div class="second-row">
+              <div class="item-container">
+                <img src="images/strawberry.jpg" alt="" />
+                <div>
+                  <button class="hot">HOT</button>
+                </div>
+                <div class="item-title">
+                  <h2>Cream with strawberry</h2>
+                  <p>$15.00</p>
+                </div>
+              </div>
+
+              <div class="second" id="hide">
+                <div class="item-container">
+                  <img src="images/Cappuccino.jpg" alt="" />
+                  <div>
+                    <button class="sale-only">SALE</button>
+                  </div>
+                  <div class="item-title">
+                    <h2>Cappuccino Ice Cream</h2>
+                    <p>$18.00 <span class="offer">$20.00</span></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="about">
+        <img src="images/About.jpeg" alt="" />
+        <div class="about-content">
+          <div>
+            <h3>
+              Stepping into 15th years <br />
+              of sharing smiles
+            </h3>
+          </div>
+          <div class="content">
+            <p>
+              Praesent commodo cursus mangna, vel scelerisque nisi consectetur
+              et. Cras mattis consectetur purus sit amet formentum. Lorem ipsum
+              dolor sit amet, consectetur adipiscing elit. Donex ullamcorper
+              nulla non metus auctor fringilla. Nullam quis risus eget urna
+              mollis ornare vel eu leo.
+            </p>
+            <div class="about-btn">
+              <button>ABOUT OARS STORE</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="home-section bottom-section">
+        <div class="items">
+          <div>
+            <div class="first-row">
+              <div>
+                <div class="item-container">
+                  <img src="images/Chocolate & Nuts.jpg" alt="" />
+                  <div>
+                    <button class="hot">HOT</button>
+                  </div>
+                </div>
+
+                <div class="item-title">
+                  <h2>Chocolate.</h2>
+                  <p>$12.00</p>
+                </div>
+              </div>
+
+              <div class="second" id="hide">
+                <div class="item-container">
+                  <img src="images/Popsicles-isolated.jpg" alt="" />
+                  <div>
+                    <button class="hot">HOT</button>
+                  </div>
+                  <div>
+                    <button class="sale">SAVE</button>
+                  </div>
+                </div>
+                <div class="item-title">
+                  <h2>Colorful Popsicies Isolated</h2>
+                  <p>$36.90 <span class="offer">$41.00</span></p>
+                </div>
+              </div>
+            </div>
+
+            <div class="second-row">
+              <div class="item-container">
+                <img src="images/Chocolate.jpg" alt="" />
+                <div>
+                  <button class="hot">HOT</button>
+                </div>
+                <div class="item-title">
+                  <h2>Ice Cream</h2>
+                  <p>$15.00</p>
+                </div>
+              </div>
+
+              <div class="second" id="hide">
+                <div class="item-container">
+                  <img src="images/Popsicles-isolated.jpg" alt="" />
+                  <div>
+                    <button class="sale-only">SALE</button>
+                  </div>
+                  <div class="item-title">
+                    <h2>Colorful Popsicies Isolated</h2>
+                    <p>$18.00 <span class="offer">$20.00</span></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="right-side"></div>
+      </div>
+
+      <div class="brands">
+        <div>
+          <img src="images/brand1.png" alt="" />
+          <img src="images/brand2.png" alt="" />
+          <img src="images/brand3.png" alt="" />
+          <img src="images/brand4.png" alt="" id="hide" />
+          <img src="images/brand5.png" alt="" id="hide" />
+          <img src="images/brand6.png" alt="" id="hide" />
+        </div>
+      </div>
+
+      <footer class="information">
+        <div class="footer-items">
+          <div class="contact-us">
+            <h2>contact Us</h2>
+            <span class="percen"></span>
+
+            <p>
+              Fusce dapibus, tellus ac ocrsus commodo, tortor <br />
+              mauris condimentum nibh.
+            </p>
+
+            <h3>
+              <i class="fa fa-map-marker" aria-hidden="true"></i> 221b
+              Nothingham Forest - London - UK
+            </h3>
+            <h3>
+              <i class="fa fa-phone" aria-hidden="true"></i> 0123 456 789 - 0123
+              987 675
+            </h3>
+            <h3>
+              <i class="fa fa-telegram" aria-hidden="true"> </i>
+              tivatheme@gmail.com
+            </h3>
+          </div>
+
+          <div class="opening-hours">
+            <h2>Opening Hours</h2>
+            <span class="percen"> </span>
+            <h3>MON - FRI:</h3>
+            <p>08:00 am - 17:00 pm</p>
+            <h3>SAT - SUN:</h3>
+            <p>06:00 am - 11:30 pm</p>
+          </div>
+
+          <div class="useful-links">
+            <h2>Useful Links</h2>
+            <span class="percen">
+              <div></div>
+            </span>
+            <div class="useful">
+              <a href="">About Us</a>
+              <a href="">Portfolio</a>
+              <a href="">Terms Of Service</a>
+              <a href="">Privacy Policy</a>
+              <a href="">Contact Us</a>
+            </div>
+          </div>
+
+          <div class="get-direction">
+            <h2>Get Direction</h2>
+            <span class="percen"> </span>
+            <div>
+              <div class="map">
+                <img src="images/map.PNG" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+      <div class="copy-right">
+        <h3>
+          Ⓒ 2020 <span class="brand-name"> OARS ORGANIC.</span> All Rights
+          Reserved. Design by <span class="theme-name">TIVATHEME</span>
+        </h3>
+
+        <div class="footer-links">
+          <ul>
+            <li><a href="mailto:"> Help</a></li>
+            <li><a href="">FAQs</a></li>
+            <li><a href="">Online Support</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

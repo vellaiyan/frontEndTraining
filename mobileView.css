@@ -1,0 +1,199 @@
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.top-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.bottom-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.top-section .left-side {
+    width: 100%;
+    height: 18rem;
+    margin: 2rem 0rem;
+    
+}
+
+.hot {
+    right: 0px;
+}
+
+.top-section .first-row {
+    display: flex;
+    flex-direction: column;
+}
+
+.bottom-section .first-row {
+    display: flex;
+    flex-direction: column;
+}
+
+.top-section .second-row {
+    padding: 34rem 34rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.bottom-section .second-row {
+    display: flex;
+    flex-direction: column;
+    padding: 34rem 0rem;
+}
+
+.about {
+    padding-top: 12rem;
+}
+
+.top-section .second {
+    padding: 3rem 0rem;
+}
+
+.top-section .second-row {
+    flex-direction: column;
+    padding: 0rem 0rem;
+    
+}
+
+.bottom-section {
+    margin-top: 11rem;
+}
+
+.about-content {
+    position: absolute;
+    margin: 56.7rem 0rem;
+}
+
+.about-content h3 {
+    font-size: 0.7rem;
+}
+
+.about-content p {
+    font-size: 0.3rem;
+    padding-top: 0rem;
+}
+
+.about-btn {
+    padding-top: 0rem;
+}
+
+.about-btn button{
+    padding: 3px;
+    font-size: 5px;
+}
+
+.footer-items {
+    display: flex;
+    flex-direction: column;
+}
+
+.header-division ul {
+    display: none;
+}
+
+.item-title {
+    width: 87%;
+    margin: auto;
+}
+
+.hot {
+    right: 25px;
+}
+
+.top-section .right-side {
+
+    width: 100%;
+}
+
+#hide {
+    display: none;
+}
+
+.bottom-section .second-row {
+    padding: 0rem 0rem;
+}
+
+.bottom-section .right-side {
+    width: 100%;
+
+}
+
+.brands {
+    margin-top: -10rem;
+}
+
+.brands div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.information {
+    height: 71rem;
+}
+
+.brands div img {
+    width: 5rem;
+}
+
+.footer-items {
+    padding: 2rem 0.3rem;
+}
+
+.copy-right {
+    display: flex;
+    flex-direction: column;
+}
+
+.copy-right h3 {
+    font-size: 0.7rem;
+    text-align: center;
+}
+
+.copy-right ul {
+    align-items: center;
+}
+
+.copy-right ul li {
+    text-align: center;
+    font-size: 0.6rem;
+    padding: 10px 7px;
+}
+
+.footer-links {
+    text-align: center;
+}
+
+.information p {
+    margin-top: 1rem;
+    padding: 0rem 0.8rem;
+}
+
+.information h3 {
+    padding: 0rem 0.5rem;
+}
+
+.opening-hours h2 {
+    padding-top: 1rem;
+}
+
+.opening-hours h3 {
+    padding-top: 1rem;
+}
+
+.useful-links h2 {
+    padding-top: 1rem;
+
+}
+
+.useful {
+    padding-top: 1rem;
+    padding-left: 1rem;
+}
+
+
