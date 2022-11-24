@@ -26,7 +26,7 @@
   {
     "id": "4",
     "ItemName": "Cappuccino Ice Cream",
-    "offer": "$20.00",
+    "offer": "20.00",
     "hot": "yes",
     "sale": "no",
     "cost": "18.00"
