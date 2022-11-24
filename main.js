@@ -1,31 +1,17 @@
 window.addEventListener("load", () => {
   todos = JSON.parse(localStorage.getItem("todos")) || [];
 
-  //   fetch("file:///C:/Users/LENOVO/Desktop/json/json.html")
-  //     .then((response) => {
-  //       return response.json();
-  //     })
-  //     .then((response) => {
-  //       console.log(response);
-  //     });
-  console.log(todos.length);
-  if (todos.length >= 1) {
-    todos = [];
-  }
+  fetch(
+    "https://raw.githubusercontent.com/vellaiyan/frontEndTraining/24-11-2022/.mockend.json",
+    { cache: "no-store" }
+  )
+    .then((response) => {
+      return response.json();
+    })
+    .then((items) => {
+      localStorage.setItem("todos", JSON.stringify(items));
+    });
 
-  const todo = {
-    itemName: "Ice Cream With Tilamisu Flavor",
-    cost: "$12.00",
-  };
-
-  todos.push(todo);
-
-  todo2 = {
-    itemName: "Scrachatella ice cream",
-    cost: "$36.90",
-  };
-  todos.push(todo2);
-  localStorage.setItem("todos", JSON.stringify(todos));
   displayItems();
 });
 
@@ -77,7 +63,7 @@ function displayItems() {
 
     const itemTitleText = document.createElement("h2");
     itemTitleText.classList.add("item-name");
-    itemTitleText.innerHTML = element.itemName;
+    itemTitleText.innerHTML = element.ItemName;
     itemTitle.appendChild(itemTitleText);
 
     const price = document.createElement("p");
@@ -140,4 +126,9 @@ function displayItems() {
       console.log(element.cost);
     });
   });
+}
+
+function openForm() {
+  ordersLayout = document.getElementById("ordered-items");
+  ordersLayout.style.display = "block";
 }
