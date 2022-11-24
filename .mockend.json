@@ -5,7 +5,8 @@
     "offer": "",
     "hot": "yes",
     "sale": "no",
-    "cost": "12.00"
+    "cost": "12.00",
+    "url": "https://drive.google.com/file/d/1Ts-JG0tDbjtp5WRRenDv09935QbPfg8O/view?usp=share_link"
   },
   {
     "id": "2",
@@ -13,7 +14,8 @@
     "offer": "41.00",
     "hot": "yes",
     "sale": "yes",
-    "cost": "36.90"
+    "cost": "36.90",
+    "url": "https://drive.google.com/file/d/1Yg1mGRBW6hmVhFOViCWNOQ7f43OX0lVu/view?usp=share_link"
   },
   {
     "id": "3",
@@ -21,7 +23,8 @@
     "offer": "",
     "hot": "yes",
     "sale": "no",
-    "cost": "15.00"
+    "cost": "15.00",
+    "url": "https://drive.google.com/file/d/1AKWCbpK3Omy1pM7Xcr7-i7DnhR_7PQxE/view?usp=share_link"
   },
   {
     "id": "4",
@@ -29,6 +32,7 @@
     "offer": "20.00",
     "hot": "yes",
     "sale": "no",
-    "cost": "18.00"
+    "cost": "18.00",
+    "url": "https://drive.google.com/file/d/1Yg1mGRBW6hmVhFOViCWNOQ7f43OX0lVu/view?usp=share_link"
   }
   ]
