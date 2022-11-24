@@ -3,24 +3,32 @@
     "id": "1",
     "ItemName": "Ice Cream With Tiramisu Flavor",
     "offer": "",
+    "hot": "yes",
+    "sale": "no",
     "cost": "$12.00"
   },
   {
     "id": "2",
     "ItemName": "Scrachatella Ice Cream",
     "offer": "$41",
+    "hot": "yes",
+    "sale": "yes",
     "cost": "$36.90"
   },
   {
     "id": "3",
     "ItemName": "Cream with strawberry",
     "offer": "",
+    "hot": "yes",
+    "sale": "no",
     "cost": "$5"
   },
   {
     "id": "4",
     "ItemName": "Cappuccino Ice Cream",
     "offer": "$20.00",
+    "hot": "yes",
+    "sale": "no",
     "cost": "$2"
   }
   ]
