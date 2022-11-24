@@ -8,5 +8,10 @@
     "id": "2",
     "ItemName": "Scrachatella Ice Cream",
     "cost": "$36.90"
+  }, 
+  {
+    "id": "3",
+    "ItemName": "samosa",
+    "cost": "$1"
   }
   ]
