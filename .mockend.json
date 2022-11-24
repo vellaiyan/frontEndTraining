@@ -15,7 +15,7 @@
     "hot": "yes",
     "sale": "yes",
     "cost": "36.90",
-    "url": "https://drive.google.com/file/d/1Yg1mGRBW6hmVhFOViCWNOQ7f43OX0lVu/view?usp=share_link"
+    "url": "images/Scrachatella.jpg"
   },
   {
     "id": "3",
@@ -24,7 +24,7 @@
     "hot": "yes",
     "sale": "no",
     "cost": "15.00",
-    "url": "https://drive.google.com/file/d/1AKWCbpK3Omy1pM7Xcr7-i7DnhR_7PQxE/view?usp=share_link"
+    "url": "images/strawberry.jpg"
   },
   {
     "id": "4",
@@ -33,6 +33,6 @@
     "hot": "yes",
     "sale": "no",
     "cost": "18.00",
-    "url": "https://drive.google.com/file/d/1Yg1mGRBW6hmVhFOViCWNOQ7f43OX0lVu/view?usp=share_link"
+    "url": "images/Cappuccino.jpg"
   }
   ]
