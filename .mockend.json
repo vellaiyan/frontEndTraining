@@ -10,7 +10,7 @@
   {
     "id": "2",
     "ItemName": "Scrachatella Ice Cream",
-    "offer": "$41",
+    "offer": "$41.00",
     "hot": "yes",
     "sale": "yes",
     "cost": "$36.90"
@@ -21,7 +21,7 @@
     "offer": "",
     "hot": "yes",
     "sale": "no",
-    "cost": "$5"
+    "cost": "$15.00"
   },
   {
     "id": "4",
@@ -29,6 +29,6 @@
     "offer": "$20.00",
     "hot": "yes",
     "sale": "no",
-    "cost": "$2"
+    "cost": "$18.00"
   }
   ]
