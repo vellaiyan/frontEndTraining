@@ -1,19 +1,23 @@
 window.addEventListener("load", () => {
-  todos = JSON.parse(localStorage.getItem("todos")) || [];
+  items = JSON.parse(localStorage.getItem("items")) || [];
+  cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+  orderedCount = document.getElementById("count");
+  orderedCount.innerHTML = cartItems.length;
 
-  fetch(
-    "https://raw.githubusercontent.com/vellaiyan/frontEndTraining/24-11-2022/.mockend.json",
-    { cache: "no-store" }
-  )
-    .then((response) => {
-      return response.json();
-    })
-    .then((items) => {
-      localStorage.setItem("todos", JSON.stringify(items));
-    });
+  fetchApi().then((response) => {
+    localStorage.setItem("items", JSON.stringify(response));
+  });
 
   displayItems();
 });
+
+async function fetchApi() {
+  const response = await fetch(
+    "https://raw.githubusercontent.com/vellaiyan/frontEndTraining/24-11-2022/.mockend.json"
+  );
+  const data = await response.json();
+  return data;
+}
 
 function displayItems() {
   const topSection = document.querySelector("#top-section");
@@ -23,13 +27,15 @@ function displayItems() {
   leftSide.classList.add("left-side");
 
   topSection.appendChild(leftSide);
+  const rightSide = document.createElement("div");
+  rightSide.classList.add("right-side");
+  rightSide.classList.add("items");
+
+  topSection.appendChild(rightSide);
 
   /* right side of the top section */
-  todos.forEach((element) => {
-    const rightSide = document.createElement("div");
-    rightSide.classList.add("right-side");
-    rightSide.classList.add("items");
-
+  items.forEach((element) => {
+    console.log(element.cost);
     const itemDivision = document.createElement("div");
     itemDivision.classList.add("item-division");
 
@@ -43,7 +49,7 @@ function displayItems() {
     itemContainer.classList.add("item-container");
 
     const firstItem = document.createElement("img");
-    firstItem.setAttribute("src", "images/Tiramisu-Flavor.jpg");
+    firstItem.setAttribute("src", element.url);
     firstItem.classList.add("first-item");
     itemContainer.appendChild(firstItem);
 
@@ -51,6 +57,13 @@ function displayItems() {
     hotButton.classList.add("hot");
     hotButton.innerHTML = "HOT";
     itemContainer.appendChild(hotButton);
+
+    if (element.sale != "no") {
+      const saleButton = document.createElement("button");
+      saleButton.innerHTML = "SALE";
+      saleButton.classList.add("sale");
+      itemContainer.appendChild(saleButton);
+    }
 
     const addButton = document.createElement("div");
     addButton.classList.add("add-button");
@@ -68,67 +81,121 @@ function displayItems() {
 
     const price = document.createElement("p");
     price.classList.add("price");
-    price.innerHTML = element.cost;
+    price.innerHTML = "$" + element.cost;
     itemTitle.appendChild(price);
+
+    if (element.offer != "") {
+      const offer = document.createElement("span");
+      offer.classList.add("offer");
+      offer.innerHTML = "$" + element.offer;
+      price.appendChild(offer);
+    }
 
     first.appendChild(itemContainer);
     first.appendChild(itemTitle);
 
     firstRow.appendChild(first);
 
-    /* first row completed */
-
-    // const secondRow = document.createElement("div");
-    // secondRow.classList.add("second-row");
-
-    // const itemContainer2 = document.createElement("div");
-    // itemContainer2.classList.add("item-container");
-    // secondRow.appendChild(itemContainer2);
-
-    // const thirdItem = document.createElement("img");
-    // thirdItem.setAttribute("src", "images/Tiramisu-Flavor.jpg");
-    // thirdItem.classList.add("third-item");
-    // itemContainer2.appendChild(thirdItem);
-
-    // const hotButton2 = document.createElement("button");
-    // hotButton.innerHTML = "HOT";
-    // hotButton2.classList.add("hot");
-
-    // itemContainer2.appendChild(hotButton2);
-
-    // const addButton2 = document.createElement("div");
-    // addButton2.classList.add("add-button");
-    // addButton2.innerHTML = "Add";
-    // itemContainer2.appendChild(addButton2);
-
-    // const itemTitle2 = document.createElement("div");
-    // itemTitle2.classList.add("item-title");
-    // itemContainer2.appendChild(itemTitle2);
-
-    // const itemTitleText2 = document.createElement("h2");
-    // itemTitleText2.classList.add("item-name");
-    // itemTitleText2.innerHTML = "Vellaiyan";
-    // itemTitle2.appendChild(itemTitleText2);
-
-    // const price2 = document.createElement("p");
-    // price2.classList.add("price");
-    // price2.innerHTML = "$12";
-    // itemTitle2.appendChild(price2);
-
-    // itemContainer2.appendChild(itemTitle2);
-
     itemDivision.appendChild(firstRow);
-    //itemDivision.appendChild(secondRow);
     rightSide.appendChild(itemDivision);
-    topSection.appendChild(rightSide);
 
     addButton.addEventListener("click", () => {
-      console.log(element.cost);
+      cartItems.forEach((item) => {
+        if (item.ItemName == element.itemName) {
+          return;
+        }
+      });
+      const cartItem = {
+        itemName: element.ItemName,
+        cost: element.cost,
+      };
+      console.log(cartItem);
+      cartItems.push(cartItem);
+      localStorage.setItem("cartItems", JSON.stringify(cartItems));
+      orderedCount = document.getElementById("count");
+      orderedCount.innerText = cartItems.length;
     });
   });
 }
 
-function openForm() {
+function openOrders() {
+  var totalCost = 0;
   ordersLayout = document.getElementById("ordered-items");
   ordersLayout.style.display = "block";
+  console.log(cartItems.length);
+
+  const cartItemsLayout = document.querySelector("#cartItems");
+  cartItemsLayout.innerHTML = "";
+
+  cartItems.forEach((cartItem, index) => {
+    totalCost += parseInt(cartItem.cost);
+    const orderedItem = document.createElement("div");
+    orderedItem.classList.add("orderedItem");
+
+    const orderedItemIndex = document.createElement("input");
+    orderedItemIndex.classList.add("text");
+    orderedItemIndex.classList.add("orderedItemIndex");
+    orderedItemIndex.type = "text";
+    orderedItemIndex.value = index + 1;
+    //orderedItemIndex.classList.add("orderedItemIndex");
+    //have to set the index of the item
+
+    const indexElement = document.createElement("div");
+    indexElement.classList.add("index");
+    indexElement.appendChild(orderedItemIndex);
+
+    /* index completed           */
+
+    const orderedItemName = document.createElement("input");
+    orderedItemName.classList.add("text");
+    orderedItemName.classList.add("orderedItemName");
+    orderedItemName.type = "text";
+    orderedItemName.value = cartItem.itemName;
+
+    const nameElement = document.createElement("div");
+    nameElement.classList.add("cartItemName");
+    nameElement.appendChild(orderedItemName);
+
+    /* name completed */
+
+    const deleteElement = document.createElement("button");
+    deleteElement.classList.add("delete");
+    deleteElement.innerHTML =
+      "<i style = 'font-size: 30px; color: #ffeb3b; weight: 900' class='fa fa-trash-o'></i>";
+
+    const orderedItemPrice = document.createElement("input");
+    orderedItemPrice.classList.add("text");
+    orderedItemPrice.classList.add("orderedItemPrice");
+    orderedItemPrice.type = "text";
+    orderedItemPrice.value = "$" + cartItem.cost;
+
+    const priceElement = document.createElement("div");
+    priceElement.classList.add("cartItemPrice");
+    priceElement.appendChild(orderedItemPrice);
+
+    /* price completed */
+
+    orderedItem.appendChild(indexElement);
+    orderedItem.appendChild(nameElement);
+    orderedItem.appendChild(deleteElement);
+    orderedItem.appendChild(priceElement);
+    cartItemsLayout.appendChild(orderedItem);
+
+    deleteElement.addEventListener("click", () => {
+      cartItems = cartItems.filter((t) => t != cartItem);
+      localStorage.setItem("cartItems", JSON.stringify(cartItems));
+      orderedCount = document.getElementById("count");
+      orderedCount.innerText = cartItems.length;
+      openOrders();
+    });
+  });
+
+  const totalCostelement = document.getElementById("cost");
+  totalCostelement.innerHTML = "$" + totalCost.toString();
+  console.log(totalCost);
+}
+
+function closeOrders() {
+  ordersLayout = document.getElementById("ordered-items");
+  ordersLayout.style.display = "none";
 }
