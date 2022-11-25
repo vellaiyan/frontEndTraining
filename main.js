@@ -1,15 +1,38 @@
 window.addEventListener("load", () => {
   items = JSON.parse(localStorage.getItem("items")) || [];
   cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+  userDetails = JSON.parse(localStorage.getItem("userDetails")) || [];
+
+  validateUser();
+  userName = document.querySelector(".userName");
+  userName.innerHTML = userDetails[0].userName;
   orderedCount = document.getElementById("count");
   orderedCount.innerHTML = cartItems.length;
-
   fetchApi().then((response) => {
     localStorage.setItem("items", JSON.stringify(response));
   });
 
   displayItems();
 });
+
+function registerUser() {
+  userName = document.querySelector("#user-Name");
+  submit = document.querySelector("submit");
+  let enteredUserName = userName.value;
+  if (!userName.value) {
+    alert("Please enter a user name");
+    return;
+  } else {
+    const user = {
+      userName: enteredUserName,
+    };
+    userDetails.push(user);
+    localStorage.setItem("userDetails", JSON.stringify(userDetails));
+    form = document.querySelector("#welcome-form");
+    form.style.display = "none";
+    document.location.reload();
+  }
+}
 
 async function fetchApi() {
   const response = await fetch(
@@ -19,6 +42,25 @@ async function fetchApi() {
   return data;
 }
 
+function validateUser() {
+  sectionContainer = document.querySelector(".top-section");
+  container = document.querySelector(".container");
+  loginForm = document.querySelector(".welcome");
+  if (userDetails.length <= 0) {
+    container.style.overflow = "hidden";
+    sectionContainer.style.opacity = "5%";
+
+    loginForm.style.display = "block";
+  } else {
+    container.style.overflow = "none";
+    loginForm.style.display = "none";
+  }
+}
+
+function logout() {
+  localStorage.removeItem("userDetails");
+  document.location.reload();
+}
 function displayItems() {
   const topSection = document.querySelector("#top-section");
   topSection.innerHTML = "";
@@ -100,11 +142,6 @@ function displayItems() {
     rightSide.appendChild(itemDivision);
 
     addButton.addEventListener("click", () => {
-      cartItems.forEach((item) => {
-        if (item.ItemName == element.itemName) {
-          return;
-        }
-      });
       const cartItem = {
         itemName: element.ItemName,
         cost: element.cost,
@@ -186,13 +223,13 @@ function openOrders() {
       localStorage.setItem("cartItems", JSON.stringify(cartItems));
       orderedCount = document.getElementById("count");
       orderedCount.innerText = cartItems.length;
+
       openOrders();
     });
   });
 
   const totalCostelement = document.getElementById("cost");
   totalCostelement.innerHTML = "$" + totalCost.toString();
-  console.log(totalCost);
 }
 
 function closeOrders() {

@@ -49,6 +49,12 @@
             <li><a href="">ABOUT US</a></li>
             <li><a href="">CONTACT</a></li>
           </ul>
+          <div class="userName">
+            <h4></h4>
+          </div>
+          <div class="log-out-container">
+            <button id="log-out" onclick="logout()">Log Out</button>
+          </div>
           <div class="icons">
             <a href=""><i class="fa fa-search" aria-hidden="true"></i></a>
             <button id="open" onclick="openOrders()">
@@ -65,6 +71,17 @@
     </div>
     <div class="ordered-items" id="orders"></div>
     <div class="container">
+      <div class="welcome" id="welcome-form">
+        <h1>welcome</h1>
+        <p>Please Enter your Name to Continue</p>
+        <div class="userNameContainer">
+          <input type="text" id="user-Name" placeholder="Enter your name..." />
+        </div>
+        <div class="submitButtonContainer">
+          <button class="submit" onclick="registerUser()">Submit</button>
+        </div>
+      </div>
+
       <div id="ordered-items">
         <button class="close-button" onclick="closeOrders()">
           <i class="fa fa-times-circle" aria-hidden="true"></i>
