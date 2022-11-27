@@ -52,6 +52,7 @@
 }
 
 .item-division {
+    width: 44%;
     padding: 0rem 0.8rem;
     display: inline-block;
 }
@@ -156,8 +157,6 @@ ul li{
 
 .first-row {
     display: flex;
-    height: 21rem;
-
     background: var(--white);
 }
 
@@ -179,7 +178,7 @@ height: 15rem;
 .item {
     display: flex;
 
-    padding: 10px;
+    padding: 15px 0px;
     flex-direction: column;
 }
 
@@ -1010,6 +1009,13 @@ input:focus{
     background: var(--white);
 }
 
+.quantity {
+    height: 2rem;
+    font-size: 1.2rem;
+    border: none;
+    background: var(--white);
+}
+
 .delete:hover {
 
 }
@@ -1033,8 +1039,6 @@ input:focus{
     position: absolute;
     background: var(--red);
     color: var(--white);
-    
-
 }
 
 
