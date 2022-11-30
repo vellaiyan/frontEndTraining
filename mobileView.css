@@ -31,6 +31,7 @@
 
 .bottom-section .first-row {
     display: flex;
+    width: 87%;
     flex-direction: column;
 }
 
@@ -42,8 +43,9 @@
 
 .bottom-section .second-row {
     display: flex;
+    width: 87%;
     flex-direction: column;
-    padding: 34rem 0rem;
+    padding: 1rem 0rem;
 }
 
 .about {
@@ -64,9 +66,16 @@
     margin-top: 11rem;
 }
 
+.item-division {
+    width: 87%;
+}
+
+.about {
+    padding-top: 5rem;
+}
 .about-content {
     position: absolute;
-    margin: 56.7rem 0rem;
+    margin: 106.7rem 0rem;
 }
 
 .about-content h3 {
@@ -102,7 +111,19 @@
 }
 
 .hot {
-    right: 25px;
+    right: 4px;
+}
+
+.userName {
+    display: none;
+}
+
+.log-out-container {
+    display: none;
+}
+
+.sale {
+    right: 4px;
 }
 
 .top-section .right-side {

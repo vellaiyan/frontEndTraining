@@ -8,7 +8,6 @@ window.addEventListener("load", () => {
   fetchApi().then((response) => {
     localStorage.setItem("items", JSON.stringify(response));
   });
-
   displayItems();
 });
 
@@ -127,9 +126,7 @@ function displayItems() {
 
     item.appendChild(itemContainer);
     item.appendChild(itemTitle);
-
     firstRow.appendChild(item);
-
     itemDivision.appendChild(firstRow);
     rightSide.appendChild(itemDivision);
 
@@ -151,7 +148,6 @@ function displayItems() {
       });
 
       if (isPresent == 0) {
-        console.log(cartItem);
         cartItems.push(cartItem);
         localStorage.setItem("cartItems", JSON.stringify(cartItems));
         orderedCount = document.getElementById("count");
@@ -162,11 +158,11 @@ function displayItems() {
   });
 }
 
+//To open cart items
 function openOrders() {
   var totalCost = 0;
   ordersLayout = document.getElementById("ordered-items");
   ordersLayout.style.display = "block";
-  console.log(cartItems.length);
 
   const cartItemsLayout = document.querySelector("#cartItems");
   cartItemsLayout.innerHTML = "";
@@ -179,13 +175,11 @@ function openOrders() {
     orderedItemIndex.classList.add("orderedItemIndex");
     orderedItemIndex.type = "text";
     orderedItemIndex.value = index + 1;
-    //orderedItemIndex.classList.add("orderedItemIndex");
-    //have to set the index of the item
 
     const indexElement = createEle("div", "index");
     indexElement.appendChild(orderedItemIndex);
 
-    /* index completed           */
+    /* index completed */
 
     const orderedItemName = createEle("input", "text");
     orderedItemName.classList.add("orderedItemName");
@@ -214,6 +208,7 @@ function openOrders() {
     orderedItemPrice.value = "$" + cartItem.cost;
 
     const priceElement = createEle("div", "cartItemPrice");
+    priceElement.setAttribute("readonly", "readonly");
     priceElement.appendChild(orderedItemPrice);
 
     /* price completed */
@@ -227,21 +222,22 @@ function openOrders() {
 
     quantityElement.addEventListener("change", () => {
       let input = event.target;
-
-      cartItem.cost = input.value * cartItem.itemCost;
-      cartItem.quantity = input.value;
-      localStorage.setItem("cartItems", JSON.stringify(cartItems));
-      openOrders();
+      if (input.value <= 0) {
+        input.value = 1;
+      } else {
+        cartItem.cost = input.value * cartItem.itemCost;
+        cartItem.quantity = input.value;
+        localStorage.setItem("cartItems", JSON.stringify(cartItems));
+        openOrders();
+      }
     });
-
-    deleteItem(deleteElement, cartItems);
 
     deleteElement.addEventListener("click", () => {
       cartItems = cartItems.filter((t) => t != cartItem);
       localStorage.setItem("cartItems", JSON.stringify(cartItems));
       orderedCount = document.getElementById("count");
+      console.log(cartItemsLayout);
       orderedCount.innerText = cartItems.length;
-
       openOrders();
     });
   });
@@ -250,13 +246,13 @@ function openOrders() {
   totalCostelement.innerHTML = "$" + totalCost.toString();
 }
 
-function deleteItem(deleteElement, cartItems) {}
-
+//to close cartItems
 function closeOrders() {
   ordersLayout = document.getElementById("ordered-items");
   ordersLayout.style.display = "none";
 }
 
+//To create element
 function createEle(ele, classlist) {
   element = document.createElement(ele);
   element.classList.add(classlist);

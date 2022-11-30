@@ -188,7 +188,7 @@ height: 15rem;
 }
 
 .second-row {
-    padding-top: 0.6rem;
+    padding-top: 2.6rem;
     display: flex;
     height: 21rem;
     background:var(--white);
@@ -581,7 +581,7 @@ footer h2 {
 }
 
 #ordered-items {
-    width: 70%;
+    width: 50%;
     opacity: 90%;
     border: 2px solid var(--black);
     border-radius: 40px;
@@ -702,6 +702,7 @@ bottom: 30% ;
 
 #ordered-items h1 {
     text-align: center;
+    font-size: 1.9rem;
     padding-top: 0.4rem;
 
 }
@@ -984,14 +985,14 @@ input:focus{
 
 .orderedItemName{
     height: 2rem;
-    font-size: 1.4rem;
+    font-size: 1rem;
     border: none;
     text-align: center;
 
 }
 
 #ordered-items h2 {
-    font-size: 1.7rem;
+    font-size: 1.5rem;
     text-align: right;
     padding-right: 2.2rem;
 }
@@ -1005,12 +1006,14 @@ input:focus{
 .delete {
     height: 2rem;
     border: none;
+    padding: 0rem 1rem;
     cursor: pointer;
     background: var(--white);
 }
 
 .quantity {
     height: 2rem;
+    width: 2rem;
     font-size: 1.2rem;
     border: none;
     background: var(--white);
